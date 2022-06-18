@@ -10,7 +10,7 @@ class Transaksi extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'user_id', 'pake_id', 'nama_pemesan', 'nomor_hp', 'keterangan', 'tanggal_pesan', 'tanggal_bayar', 'tanggal_tour', 'total' , 'status'
+        'id', 'user_id', 'paket_id', 'nama_pemesan', 'nomor_hp', 'keterangan', 'tanggal_pesan', 'tanggal_bayar', 'tanggal_tour', 'total' , 'status'
     ];
 
     public $incrementing = false;

@@ -24,7 +24,7 @@ class CreateTransaksisTable extends Migration
             $table->date('tanggal_pesan');
             $table->date('tanggal_bayar')->nullable();
             $table->date('tanggal_tour')->nullable();
-            $table->double('total');
+            $table->double('total')->nullable();
             $table->enum('status', ['paid', 'unpaid'])->default('unpaid');
             $table->timestamps();
         });
