@@ -21,6 +21,13 @@ class RoleTest extends TestCase
         $response->assertStatus(200);
     }
 
+    public function test_role_create_rendered(){
+        $response = $this->get('/admin/role/create');
+
+        $response->assertSee('Role');
+        $response->assertStatus(200);
+    }
+
     public function test_table_roles_from_database(){
         $this->assertDatabaseHas('roles', [
             'role' => 'admin',
