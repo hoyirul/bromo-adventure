@@ -31,12 +31,13 @@
       <ul class="navbar-nav float-end">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            @if (Auth::user()->foto == null)
+            {{-- Auth::user()->foto == null --}}
+            @auth
               <img src="{{ asset('assets/images/users/1.jpg') }}" alt="users" class="rounded-circle me-1" width="31" />
-            @else
-              <img src="{{ asset('storage/'.Auth::user()->foto) }}" alt="users" class="rounded-circle me-1" width="31" />
-            @endif
-            {{ Auth::user()->role->role }}
+            {{-- @else --}}
+              {{-- <img src="{{ asset('storage/'.Auth::user()->foto) }}" alt="users" class="rounded-circle me-1" width="31" /> --}}
+            @endauth
+            {{-- {{ Auth::user()->role->role }} --}}
           </a>
           <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/admin/ubah_profile"><i class="ti-settings m-r-5 m-l-5"></i>
