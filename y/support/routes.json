@@ -1,0 +1,540 @@
+{
+  "ignition.healthCheck": {
+    "name": "ignition.healthCheck",
+    "domain": null,
+    "action": "Facade\\Ignition\\Http\\Controllers\\HealthCheckController",
+    "uri": "_ignition/health-check",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "ignition.executeSolution": {
+    "name": "ignition.executeSolution",
+    "domain": null,
+    "action": "Facade\\Ignition\\Http\\Controllers\\ExecuteSolutionController",
+    "uri": "_ignition/execute-solution",
+    "method": [
+      "POST"
+    ]
+  },
+  "ignition.shareReport": {
+    "name": "ignition.shareReport",
+    "domain": null,
+    "action": "Facade\\Ignition\\Http\\Controllers\\ShareReportController",
+    "uri": "_ignition/share-report",
+    "method": [
+      "POST"
+    ]
+  },
+  "ignition.scripts": {
+    "name": "ignition.scripts",
+    "domain": null,
+    "action": "Facade\\Ignition\\Http\\Controllers\\ScriptController",
+    "uri": "_ignition/scripts/{script}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "ignition.styles": {
+    "name": "ignition.styles",
+    "domain": null,
+    "action": "Facade\\Ignition\\Http\\Controllers\\StyleController",
+    "uri": "_ignition/styles/{style}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "cypress.factory": {
+    "name": "cypress.factory",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@factory",
+    "uri": "__cypress__/factory",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.login": {
+    "name": "cypress.login",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@login",
+    "uri": "__cypress__/login",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.logout": {
+    "name": "cypress.logout",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@logout",
+    "uri": "__cypress__/logout",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.artisan": {
+    "name": "cypress.artisan",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@artisan",
+    "uri": "__cypress__/artisan",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.run-php": {
+    "name": "cypress.run-php",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@runPhp",
+    "uri": "__cypress__/run-php",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.csrf-token": {
+    "name": "cypress.csrf-token",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@csrfToken",
+    "uri": "__cypress__/csrf_token",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "cypress.routes": {
+    "name": "cypress.routes",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@routes",
+    "uri": "__cypress__/routes",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.current-user": {
+    "name": "cypress.current-user",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@currentUser",
+    "uri": "__cypress__/current-user",
+    "method": [
+      "POST"
+    ]
+  },
+  "": {
+    "name": null,
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\TransaksiController@export",
+    "uri": "admin/transaksi/export",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "login": {
+    "name": "login",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\LoginController@showLoginForm",
+    "uri": "login",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "logout": {
+    "name": "logout",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\LoginController@logout",
+    "uri": "logout",
+    "method": [
+      "POST"
+    ]
+  },
+  "password.request": {
+    "name": "password.request",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\ForgotPasswordController@showLinkRequestForm",
+    "uri": "password/reset",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "password.email": {
+    "name": "password.email",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\ForgotPasswordController@sendResetLinkEmail",
+    "uri": "password/email",
+    "method": [
+      "POST"
+    ]
+  },
+  "password.reset": {
+    "name": "password.reset",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\ResetPasswordController@showResetForm",
+    "uri": "password/reset/{token}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "password.update": {
+    "name": "password.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\ResetPasswordController@reset",
+    "uri": "password/reset",
+    "method": [
+      "POST"
+    ]
+  },
+  "password.confirm": {
+    "name": "password.confirm",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\ConfirmPasswordController@showConfirmForm",
+    "uri": "password/confirm",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "user.index": {
+    "name": "user.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\UserController@index",
+    "uri": "admin/user",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "user.create": {
+    "name": "user.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\UserController@create",
+    "uri": "admin/user/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "user.store": {
+    "name": "user.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\UserController@store",
+    "uri": "admin/user",
+    "method": [
+      "POST"
+    ]
+  },
+  "user.show": {
+    "name": "user.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\UserController@show",
+    "uri": "admin/user/{user}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "user.edit": {
+    "name": "user.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\UserController@edit",
+    "uri": "admin/user/{user}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "user.update": {
+    "name": "user.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\UserController@update",
+    "uri": "admin/user/{user}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "user.destroy": {
+    "name": "user.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\UserController@destroy",
+    "uri": "admin/user/{user}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "role.index": {
+    "name": "role.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\RoleController@index",
+    "uri": "admin/role",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "role.create": {
+    "name": "role.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\RoleController@create",
+    "uri": "admin/role/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "role.store": {
+    "name": "role.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\RoleController@store",
+    "uri": "admin/role",
+    "method": [
+      "POST"
+    ]
+  },
+  "role.show": {
+    "name": "role.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\RoleController@show",
+    "uri": "admin/role/{role}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "role.edit": {
+    "name": "role.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\RoleController@edit",
+    "uri": "admin/role/{role}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "role.update": {
+    "name": "role.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\RoleController@update",
+    "uri": "admin/role/{role}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "role.destroy": {
+    "name": "role.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\RoleController@destroy",
+    "uri": "admin/role/{role}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "tipe.index": {
+    "name": "tipe.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\TipeController@index",
+    "uri": "admin/tipe",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "tipe.create": {
+    "name": "tipe.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\TipeController@create",
+    "uri": "admin/tipe/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "tipe.store": {
+    "name": "tipe.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\TipeController@store",
+    "uri": "admin/tipe",
+    "method": [
+      "POST"
+    ]
+  },
+  "tipe.show": {
+    "name": "tipe.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\TipeController@show",
+    "uri": "admin/tipe/{tipe}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "tipe.edit": {
+    "name": "tipe.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\TipeController@edit",
+    "uri": "admin/tipe/{tipe}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "tipe.update": {
+    "name": "tipe.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\TipeController@update",
+    "uri": "admin/tipe/{tipe}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "tipe.destroy": {
+    "name": "tipe.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\TipeController@destroy",
+    "uri": "admin/tipe/{tipe}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "destinasi.index": {
+    "name": "destinasi.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\DestinasiController@index",
+    "uri": "admin/destinasi",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "destinasi.create": {
+    "name": "destinasi.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\DestinasiController@create",
+    "uri": "admin/destinasi/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "destinasi.store": {
+    "name": "destinasi.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\DestinasiController@store",
+    "uri": "admin/destinasi",
+    "method": [
+      "POST"
+    ]
+  },
+  "destinasi.show": {
+    "name": "destinasi.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\DestinasiController@show",
+    "uri": "admin/destinasi/{destinasi}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "destinasi.edit": {
+    "name": "destinasi.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\DestinasiController@edit",
+    "uri": "admin/destinasi/{destinasi}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "destinasi.update": {
+    "name": "destinasi.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\DestinasiController@update",
+    "uri": "admin/destinasi/{destinasi}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "destinasi.destroy": {
+    "name": "destinasi.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\DestinasiController@destroy",
+    "uri": "admin/destinasi/{destinasi}",
+    "method": [
+      "DELETE"
+    ]
+  },
+  "paket.index": {
+    "name": "paket.index",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\PaketController@index",
+    "uri": "admin/paket",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "paket.create": {
+    "name": "paket.create",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\PaketController@create",
+    "uri": "admin/paket/create",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "paket.store": {
+    "name": "paket.store",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\PaketController@store",
+    "uri": "admin/paket",
+    "method": [
+      "POST"
+    ]
+  },
+  "paket.show": {
+    "name": "paket.show",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\PaketController@show",
+    "uri": "admin/paket/{paket}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "paket.edit": {
+    "name": "paket.edit",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\PaketController@edit",
+    "uri": "admin/paket/{paket}/edit",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "paket.update": {
+    "name": "paket.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\PaketController@update",
+    "uri": "admin/paket/{paket}",
+    "method": [
+      "PUT",
+      "PATCH"
+    ]
+  },
+  "paket.destroy": {
+    "name": "paket.destroy",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Admin\\PaketController@destroy",
+    "uri": "admin/paket/{paket}",
+    "method": [
+      "DELETE"
+    ]
+  }
+}
