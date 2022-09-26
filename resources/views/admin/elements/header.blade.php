@@ -30,7 +30,7 @@
       </ul>
       <ul class="navbar-nav float-end">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a data-id="avatar" class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{-- Auth::user()->foto == null --}}
             @auth
               <img src="{{ asset('assets/images/users/1.jpg') }}" alt="users" class="rounded-circle me-1" width="31" />
@@ -46,7 +46,7 @@
             Ubah Password</a>
             <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('Yakin akan keluar aplikasi?')">
               @csrf
-              <button class="dropdown-item text-danger"> <i
+              <button data-id="btnLogout" class="dropdown-item text-danger"> <i
                 class="fa fa-power-off m-r-5 m-l-5"></i> Keluar</button>
             </form>
           </ul>

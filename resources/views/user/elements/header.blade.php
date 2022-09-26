@@ -10,7 +10,7 @@
         {{-- <li class="nav-item"><a class="nav-link text-600" href="#banner">Booking </a></li> --}}
       </ul>
       <div class="ps-lg-5">
-        <a href="/login" class="btn btn-lg btn-outline-primary order-0">Masuk</a>
+        <a href="/login" class="btn btn-lg btn-outline-primary order-0" data-id="btnToLogin">Masuk</a>
       </div>
     </div>
   </div>

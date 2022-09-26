@@ -12,7 +12,7 @@ module.exports = defineConfig({
         setupNodeEvents(on, config) {
             return require('./y/plugins/index.js')(on, config)
         },
-        baseUrl: 'http://localhost:8000',
+        baseUrl: 'http://localhost:8000/',
         specPattern: 'y/integration/**/*.cy.{js,jsx,ts,tsx}',
         supportFile: 'y/support/index.js',
     },
