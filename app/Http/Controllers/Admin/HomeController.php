@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Google\Cloud\Storage\StorageClient;
 
 class HomeController extends Controller
 {
@@ -71,6 +72,23 @@ class HomeController extends Controller
         if($request->foto != null){
             $image_name = $request->file('foto')->store('profile', 'public');
         }
+
+        $googleConfigFile = file_get_contents(env('GOOGLE_APPLICATION_CREDENTIALS'));
+        $storage = new StorageClient([
+            'keyFile' => json_decode($googleConfigFile, true)
+        ]);
+
+        $storageBucketName = config('googlecloud.storage_bucket');
+        $bucket = $storage->bucket($storageBucketName);
+        $fileSource = $image_name;
+        $googleCloudStoragePath = $image_name;
+        /* Upload a file to the bucket.
+        Using Predefined ACLs to manage object permissions, you may
+        upload a file and give read access to anyone with the URL.*/
+        $bucket->upload($fileSource, [
+        // 'predefinedAcl' => 'publicRead',
+            'name' => $googleCloudStoragePath
+        ]);
 
         User::where('id', auth()->user()->id)
             ->update([
