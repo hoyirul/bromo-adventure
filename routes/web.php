@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\TipeController as ATipeController;
 use App\Http\Controllers\Admin\TransaksiController as ATransaksiController;
 use App\Http\Controllers\Admin\UserController as AUserController;
 use App\Http\Controllers\User\HomeController as UHomeController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/config', function () {
+    Artisan::call(
+        'migrate:fresh',
+        [
+            '--force' => true
+        ]
+    );
+    Artisan::call(
+        'db:seed',
+        [
+            '--force' => true
+        ]
+    );
+});
 
 Route::get('/', [UHomeController::class, 'index']);
 Route::get('/paket/{id}/show', [UHomeController::class, 'show']);
